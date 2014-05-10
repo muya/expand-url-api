@@ -1,0 +1,15 @@
+<configuration xmlns="http://logging.apache.org/log4php/">
+    <appender name="fileAppender" class="LoggerAppenderFile">
+        <layout class="LoggerLayoutPattern">
+            <param name="conversionPattern" value="%date %message%newline" />
+        </layout>
+        <param name="file" value="/var/log/applications/expand-url-api/expand_url_api.log" />
+    </appender>
+    <logger name="Log" additivity="false">
+        <appender_ref ref="fileAppender" />
+    </logger>
+    <root>
+        <level value="DEBUG" />
+        <appender_ref ref="fileAppender" />
+    </root>
+</configuration>
