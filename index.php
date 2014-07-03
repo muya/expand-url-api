@@ -29,6 +29,7 @@ $urlExpanderService = 'unshort.tk';
 $provider = URLExpanderServiceProviderFactory::createProvider($urlExpanderService);
 $provider->setUrl($expandedURL);
 $provider->expandURL();
+sleep(5);
 echo json_encode(Utils::formatResponse($expandedURL->getStatus(),
     $expandedURL->getStatusMessage(), array('expandedUrl' => $expandedURL->getLongURL())));
 exit();
